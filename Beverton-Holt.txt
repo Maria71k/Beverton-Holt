@@ -1,0 +1,10 @@
+def beverton_holt_model(initial_population, r, K, t):
+    return (r * initial_population * K) / (initial_population + (r - 1) * initial_population / K)
+
+# Example usage:
+initial_population = 1000  # Initial population size
+growth_rate = 0.1  # Growth rate
+carrying_capacity = 5000  # Carrying capacity
+time = 10  # Time (in years)
+population_at_t = beverton_holt_model(initial_population, growth_rate, carrying_capacity, time)
+print("Population after", time, "years:", population_at_t)
